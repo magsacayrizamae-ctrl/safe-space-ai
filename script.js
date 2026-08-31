@@ -843,7 +843,8 @@ function listenForMessages() {
 async function getAIResponse(text) {
     try {
         const response = await fetch(
-            "https://safespace-ai-server.onrender.com",
+            "https://safespace-ai-server.onrender.com/api/chat",
+
             {
                 method: "POST",
                 headers: {
@@ -963,7 +964,7 @@ try {
 
         // Send the student's message to our AI server
         const aiResponse = await fetch(
-            "https://safespace-ai-server.onrender.com",
+            "https://safespace-ai-server.onrender.com/api/chat",
             {
                 method: "POST",
 
