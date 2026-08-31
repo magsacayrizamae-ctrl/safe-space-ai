@@ -4,8 +4,8 @@
   "description": "",
   "main": "firebase-config.js",
   "scripts": {
-  "start": "node server.js"
-},
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,7 +15,6 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "open": "^11.0.1",
-    "openai": "^7.8.0"
+    "open": "^11.0.1"
   }
 }

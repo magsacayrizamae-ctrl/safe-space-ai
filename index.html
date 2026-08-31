@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SafeSpace | Anonymous Emotional Support</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="brand">
+            🌱 SafeSpace
+        </div>
+
+        <div class="user-area">
+
+            <span id="anonymousId">
+                Connecting...
+            </span>
+
+            <button
+                id="logoutButton"
+                class="logout-button"
+            >
+                Reset
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="container">
+
+
+        <!-- WELCOME -->
+
+        <section class="welcome-card">
+
+            <h1>
+                A safe space to express yourself 💚
+            </h1>
+
+            <p>
+                Share what you're feeling and receive
+                supportive guidance.
+            </p>
+
+            <div class="privacy-badge">
+                🔒 No real name required
+            </div>
+
+        </section>
+
+
+        <!-- MOOD -->
+
+        <section class="card">
+
+            <h2>
+                How are you feeling?
+            </h2>
+
+            <p class="small-text">
+                Choose the mood that best describes
+                how you feel right now.
+            </p>
+
+
+            <div class="moods">
+
+                <button
+                    class="mood"
+                    data-mood="Happy"
+                >
+                    😊
+                    <span>Happy</span>
+                </button>
+
+
+                <button
+                    class="mood"
+                    data-mood="Sad"
+                >
+                    😔
+                    <span>Sad</span>
+                </button>
+
+
+                <button
+                    class="mood"
+                    data-mood="Stressed"
+                >
+                    😣
+                    <span>Stressed</span>
+                </button>
+
+
+                <button
+                    class="mood"
+                    data-mood="Angry"
+                >
+                    😠
+                    <span>Angry</span>
+                </button>
+
+
+                <button
+                    class="mood"
+                    data-mood="Lonely"
+                >
+                    🥺
+                    <span>Lonely</span>
+                </button>
+
+
+                <button
+                    class="mood"
+                    data-mood="Worried"
+                >
+                    😟
+                    <span>Worried</span>
+                </button>
+
+            </div>
+
+            <p id="moodStatus">
+                No mood selected
+            </p>
+
+        </section>
+
+
+        <!-- CHAT -->
+
+        <section class="chat-card">
+
+
+            <!-- CHAT HEADER -->
+
+            <div class="chat-header">
+
+                <div class="support-icon">
+                    🌱
+                </div>
+
+                <div>
+
+                    <h2>
+                        SafeSpace Support
+                    </h2>
+
+                    <span>
+                        Online supportive assistant
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHAT MESSAGES -->
+
+            <div
+                id="chatMessages"
+                class="chat-messages"
+            >
+
+                <div class="message bot">
+
+                    <div class="avatar">
+                        🌱
+                    </div>
+
+                    <div class="bubble">
+
+                        <strong>
+                            SafeSpace
+                        </strong>
+
+                        <p>
+                            Hi! I'm glad you're here. 💚
+                        </p>
+
+                        <p>
+                            You can tell me what's on your mind.
+                            You don't need to share your real name.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TYPING -->
+
+            <div class="typing-area">
+
+                <textarea
+                    id="messageInput"
+                    maxlength="1000"
+                    placeholder="Type what you're feeling..."
+                ></textarea>
+
+
+                <div class="typing-footer">
+
+                    <span id="characterCount">
+                        0 / 1000
+                    </span>
+
+                    <button
+                        id="sendButton"
+                    >
+                        Send ➤
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SAFETY -->
+
+        <section class="safety-card">
+
+            <h2>
+                🛡️ Important
+            </h2>
+
+            <p>
+                SafeSpace provides general supportive information.
+                It is not a doctor, counselor, or emergency service.
+            </p>
+
+            <p>
+                If you are experiencing something that feels
+                too difficult or unsafe to handle alone,
+                please reach out to a trusted adult or qualified
+                professional.
+            </p>
+
+        </section>
+
+
+        <!-- PRIVACY -->
+
+        <section class="privacy-card">
+
+            <h2>
+                🔒 Privacy
+            </h2>
+
+            <p>
+                This application is designed to avoid requiring
+                your real name.
+            </p>
+
+            <p>
+                For your research project, do not collect
+                unnecessary identifying information from participants.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            SafeSpace V2
+        </p>
+
+        <p>
+            Anonymous Emotional Expression & Support Prototype
+        </p>
+
+    </footer>
+
+
+    <script type="module" src="script.js"></script>
+
+    <!-- BEFORE / AFTER FEELING CHECK -->
+<section class="card feeling-card">
+
+    <h2>💚 Feeling Check</h2>
+
+    <p class="small-text">
+        Rate how you feel right now before expressing your feelings.
+    </p>
+
+    <div class="feeling-scale">
+        <button class="feeling-rating" data-rating="1">
+            1<br>
+            <span>Very Negative</span>
+        </button>
+
+        <button class="feeling-rating" data-rating="2">
+            2<br>
+            <span>Negative</span>
+        </button>
+
+        <button class="feeling-rating" data-rating="3">
+            3<br>
+            <span>Neutral</span>
+        </button>
+
+        <button class="feeling-rating" data-rating="4">
+            4<br>
+            <span>Positive</span>
+        </button>
+
+        <button class="feeling-rating" data-rating="5">
+            5<br>
+            <span>Very Positive</span>
+        </button>
+    </div>
+
+    <p id="beforeStatus">
+        No before-rating selected
+    </p>
+
+    <button id="afterRatingButton" class="after-rating-button" disabled>
+        I'm Finished Expressing My Feelings
+    </button>
+
+    <div id="afterFeelingArea" style="display:none;">
+
+        <p class="small-text">
+            Now that you've expressed your feelings, how do you feel?
+        </p>
+
+        <div class="feeling-scale">
+            <button class="after-feeling-rating" data-rating="1">
+                1<br>
+                <span>Very Negative</span>
+            </button>
+
+            <button class="after-feeling-rating" data-rating="2">
+                2<br>
+                <span>Negative</span>
+            </button>
+
+            <button class="after-feeling-rating" data-rating="3">
+                3<br>
+                <span>Neutral</span>
+            </button>
+
+            <button class="after-feeling-rating" data-rating="4">
+                4<br>
+                <span>Positive</span>
+            </button>
+
+            <button class="after-feeling-rating" data-rating="5">
+                5<br>
+                <span>Very Positive</span>
+            </button>
+        </div>
+
+        <p id="afterStatus">
+            No after-rating selected
+        </p>
+
+        <div id="feelingResult" class="feeling-result"></div>
+
+    </div>
+
+</section>
+
+</body>
+
+</html>
