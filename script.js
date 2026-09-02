@@ -13,6 +13,7 @@ import {
   orderBy,
   onSnapshot
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
 /* =========================
    HTML ELEMENTS
 ========================= */
@@ -656,10 +657,9 @@ function displayMessage(
 
         message.innerHTML = `
 
-                <div class="avatar">
+            <div class="avatar">
     <img src="my picture.png" alt="SafeSpace">
 </div>
-            </div>
 
             <div class="bubble">
 
@@ -1281,36 +1281,5 @@ async function calculateFeelingChange() {
         afterRating,
         change
     );
-}
-    
-    <script> 
-        
-        const dailyQuotes =
-         [ "You are doing better than you think. 💚",
-          "It's okay to take things one day at a time. 🌱", 
-          "Your feelings are important and worth expressing. 💚", 
-          "You don't have to have everything figured out today. ✨",
-           "One difficult day does not define your whole story. 🌿",
-            "You are allowed to feel what you feel. 💚", 
-            "Small progress is still progress. 🌱", 
-            "You deserve kindness, including from yourself. 💚",
-             "There is no perfect way to handle a difficult day. 🌿",
-              "You made it through today, and that matters. ✨", 
-              "It's okay to ask someone you trust for support. 💚"
-              , "Your voice matters. What you feel matters. 🌱", 
-              "Tomorrow is another chance to begin again. ☀️",
-               "You don't need to be strong every moment. 💚",
-                "Be patient with yourself. You're still growing. 🌱" ];
-                 const today = new Date(); 
-                 const dayNumber = Math.floor( 
-                    today.getTime() / (1000 * 60 * 60 * 24) ); 
-                    const quoteIndex = dayNumber % dailyQuotes.length;
-                     document.getElementById( "dailyQuote" ).textContent = 
-                     dailyQuotes[quoteIndex]; 
-                     document.getElementById( "dailyDate" )
-                     .textContent = today.toLocaleDateString( 
-                        undefined,
-                         { weekday: "long", 
-                        month: "long", day: "numeric" } ); 
-                        </script>
 
+}
