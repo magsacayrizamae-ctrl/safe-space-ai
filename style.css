@@ -13,9 +13,7 @@ body {
         sans-serif;
 
     background: #f1d4de;
-
-    color: #26372d;
-
+    color: #111011;
     min-height: 100vh;
 
 }
@@ -27,48 +25,44 @@ body {
 
 .header {
 
-    background: hsl(204, 83%, 82%);
-    color: white;
-
+    background: #dd6b75;
+    color: rgb(233, 227, 227);
     padding: 15px 6%;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
 }
-
 
 .brand {
-
-    font-size: 25px;
-
-    font-weight: bold;
-
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
+.brand img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.brand span {
+    font-weight: bold;
+    font-size: 24px;
+}
 
 .user-area {
 
     display: flex;
-
     align-items: center;
-
     gap: 10px;
-
 }
 
 
 #anonymousId {
 
     background: rgba(255,255,255,0.2);
-
     padding: 7px 12px;
-
     border-radius: 20px;
-
     font-size: 13px;
 
 }
@@ -77,11 +71,8 @@ body {
 .logout-button {
 
     border: none;
-
     padding: 7px 12px;
-
     border-radius: 8px;
-
     cursor: pointer;
 
 }
@@ -94,52 +85,10 @@ body {
 .container {
 
     width: 94%;
-
     max-width: 800px;
-
     margin: 25px auto;
 
 }
-
-
-/* =========================
-   WELCOME
-========================= */
-
-.welcome-card {
-
-    background: rgb(247, 179, 196);
-
-    text-align: center;
-
-    padding: 30px;
-
-    border-radius: 18px;
-
-    margin-bottom: 20px;
-
-    box-shadow:
-        0 5px 20px rgba(0,0,0,0.07);
-
-}
-
-
-.welcome-card h1 {
-
-    margin-bottom: 10px;
-
-}
-
-
-.welcome-card p {
-
-    color: #94576b;
-
-}
-
-
-
-
 
 /* =========================
    CARDS
@@ -148,13 +97,9 @@ body {
 .card {
 
     background: rgb(240, 225, 234);
-
     padding: 22px;
-
     border-radius: 18px;
-
     margin-bottom: 20px;
-
     box-shadow:
         0 5px 20px rgba(0,0,0,0.07);
 
@@ -163,10 +108,8 @@ body {
 
 .small-text {
 
-    color: #ee5f8f;
-
+    color: #181617;
     margin: 5px 0 15px;
-
     font-size: 14px;
 
 }
@@ -176,76 +119,78 @@ body {
    MOODS
 ========================= */
 
+/* =========================
+   MOODS
+========================= */
+
 .moods {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(6, 1fr);
-
+    grid-template-columns: repeat(6, 1fr);
     gap: 8px;
-
 }
-
 
 .mood {
-
     border: 2px solid #440d1e;
-
     background: #f5bcce;
-
     border-radius: 12px;
-
     padding: 10px 4px;
-
     cursor: pointer;
-
     font-size: 25px;
-
     transition: 0.2s;
-
-}
-
-
-.mood span {
-
-    display: block;
-
-    font-size: 12px;
-
-    margin-top: 5px;
-
-}
-
-
-.mood:hover {
-
-    transform: translateY(-2px);
-
-}
-
-
-.mood.selected {
-
-    background: #e597be;
-
-    border-color: #b8518d;
-
-}
-
-
-#moodStatus {
-
     text-align: center;
 
-    color: #dd2e86;
-
-    margin-top: 12px;
-
-    font-size: 13px;
-
 }
 
+.mood span {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.mood:hover {
+    transform: translateY(-2px);
+}
+
+.mood.selected {
+    background: #e597be;
+    border-color: #b8518d;
+}
+
+
+/* =========================
+   HIDDEN MOODS
+========================= */
+
+.more-moods {
+    display: none;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.more-moods.show {
+    display: grid;
+}
+
+
+/* =========================
+   MORE MOODS ARROW
+========================= */
+
+.show-more-moods {
+    display: block;
+    margin: 15px auto;
+    padding: 8px 18px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.show-more-moods:hover {
+    opacity: 0.7;
+}
 
 /* =========================
    CHAT
@@ -268,13 +213,9 @@ body {
 .chat-header {
 
     background: #f187b0;
-
     padding: 15px 20px;
-
     display: flex;
-
     align-items: center;
-
     gap: 12px;
 
 }
@@ -283,21 +224,13 @@ body {
 .support-icon {
 
     width: 45px;
-
     height: 45px;
-
     border-radius: 50%;
-
     background: hsl(335, 71%, 77%);
-
     color: white;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     font-size: 22px;
     color: white;
 
@@ -326,7 +259,6 @@ body {
 .chat-header span {
 
     color: #ec99b2;
-
     font-size: 12px;
 
 }
@@ -337,11 +269,8 @@ body {
 ========================= */
 
 .chat-messages {
-
     height: 430px;
-
     overflow-y: auto;
-
     padding: 20px;
     background: #f5d3e3;
 }
@@ -350,11 +279,8 @@ body {
 .message {
 
     display: flex;
-
     gap: 10px;
-
     margin-bottom: 18px;
-
     max-width: 88%;
 
 }
@@ -370,7 +296,6 @@ body {
 .message.user {
 
     margin-left: auto;
-
     flex-direction: row-reverse;
 
 }
@@ -379,15 +304,10 @@ body {
 .avatar {
 
     width: 35px;
-
     height: 35px;
-
     min-width: 35px;
-
     border-radius: 50%;
-
     display: flex;
-
     align-items: center;
 
     justify-content: center;
@@ -447,11 +367,8 @@ body {
 .bubble strong {
 
     display: block;
-
     color: #5a022b;
-
     font-size: 12px;
-
     margin-bottom: 5px;
 
 }
@@ -460,7 +377,6 @@ body {
 .bubble p {
 
     font-size: 14px;
-
     margin-bottom: 7px;
 
 }
@@ -480,7 +396,6 @@ body {
 .typing-area {
 
     border-top: 1px solid #e0e9e3;
-
     padding: 15px;
 
     /* IMPORTANT */
@@ -492,21 +407,13 @@ body {
 #messageInput {
 
     width: 100%;
-
     min-height: 60px;
-
     resize: vertical;
-
     border: 2px solid #dce8df;
-
     border-radius: 12px;
-
     padding: 12px;
-
     font-family: inherit;
-
     font-size: 15px;
-
     outline: none;
 
 }
@@ -522,11 +429,8 @@ body {
 .typing-footer {
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     margin-top: 8px;
 
 }
@@ -535,7 +439,6 @@ body {
 #characterCount {
 
     color: #f0bed7;
-
     font-size: 12px;
 
 }
@@ -544,17 +447,11 @@ body {
 #sendButton {
 
     background: #e63185;
-
     color: white;
-
     border: none;
-
     padding: 10px 20px;
-
     border-radius: 10px;
-
     font-weight: bold;
-
     cursor: pointer;
 
 }
@@ -570,7 +467,6 @@ body {
 #sendButton:disabled {
 
     background: #e766a0;
-
     cursor: not-allowed;
 
 }
@@ -583,13 +479,9 @@ body {
 .safety-card {
 
     background: #fffaf0;
-
     border-left: 5px solid #d9a74b;
-
     padding: 20px;
-
     border-radius: 12px;
-
     margin-bottom: 20px;
 
 }
@@ -605,9 +497,7 @@ body {
 .safety-card p {
 
     color: #665f50;
-
     font-size: 14px;
-
     margin-bottom: 8px;
 
 }
@@ -620,11 +510,8 @@ body {
 .privacy-card {
 
     background: #f5faf7;
-
     padding: 20px;
-
     border-radius: 12px;
-
     margin-bottom: 25px;
 
 }
@@ -640,9 +527,7 @@ body {
 .privacy-card p {
 
     color: #647169;
-
     font-size: 14px;
-
     margin-bottom: 8px;
 
 }
@@ -655,11 +540,8 @@ body {
 footer {
 
     text-align: center;
-
     color: #748078;
-
     font-size: 12px;
-
     padding: 20px;
 
 }
@@ -712,6 +594,11 @@ footer {
             repeat(3, 1fr);
 
     }
+
+    .more-moods {
+    grid-template-columns:
+     repeat(3, 1fr);
+}
 
 
     .chat-messages {
@@ -791,3 +678,27 @@ footer {
     text-align: center;
 }
 
+.daily-quote {
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px 20px;
+    max-width: 600px;
+    background-color:rgb(236, 188, 200)
+    
+}
+
+#dailyQuote {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.feeling-check {
+    background: rgb(247, 239, 242);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: center;
+}

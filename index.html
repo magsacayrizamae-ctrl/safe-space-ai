@@ -25,56 +25,70 @@
          HEADER
     ========================== -->
 
-    <header class="header">
+  <header class="header">
 
-        <div class="brand">
-            🌸FEELORA
-        </div>
+    <div class="brand">
+        <img src="download.jpg" alt="Feelora Logo">
+        <span>FEELORA</span>
+    </div>
 
-        <div class="user-area">
+    <div class="user-area">
+        <span id="anonymousId">Connecting...</span>
+        <button id="logoutButton" class="logout-button">Reset</button>
+    </div>
 
-            <span id="anonymousId">
-                Connecting...
-            </span>
+</header>
 
-            <button
-                id="logoutButton"
-                class="logout-button"
-            >
-                Reset
-            </button>
+    <div class="feeling-check">
 
-        </div>
+    <h2> 💗Feeling Check</h2>
 
-    </header>
+    <p class="small-text">
+        Rate how you feel right now before expressing your feelings.
+    </p>
+
+    <div class="feeling-scale">
+
+        <button class="feeling-rating" data-rating="1">
+            1<br>
+            <span>Very Negative</span>
+        </button>
+
+        <button class="feeling-rating" data-rating="2">
+            2<br>
+            <span>Negative</span>
+        </button>
+
+        <button class="feeling-rating" data-rating="3">
+            3<br>
+            <span>Neutral</span>
+        </button>
+
+        <button class="feeling-rating" data-rating="4">
+            4<br>
+            <span>Positive</span>
+        </button>
+
+        <button class="feeling-rating" data-rating="5">
+            5<br>
+            <span>Very Positive</span>
+        </button>
+
+    </div>
+
+    <p id="beforeStatus">
+        No before-rating selected
+    </p>
+
+</div>
 
 
+     
     <!-- =========================
          MAIN
     ========================== -->
 
     <main class="container">
-
-
-        <!-- WELCOME -->
-
-        <section class="welcome-card">
-
-            <h1>
-                A Feelora🌸 to express yourself 
-            </h1>
-
-            <p>
-                Share what you're feeling and receive
-                supportive guidance.
-            </p>
-
-            <div class="privacy-badge">
-                🔒 No real name required
-            </div>
-
-        </section>
-
 
         <!-- MOOD -->
 
@@ -92,61 +106,38 @@
 
             <div class="moods">
 
-                <button
-                    class="mood"
-                    data-mood="Happy"
-                >
-                    😊
-                    <span>Happy</span>
-                </button>
+                <div class="moods">
 
+    <!-- Main moods -->
+    <button class="mood" data-mood="Happy">😊<span>Happy</span></button>
+    <button class="mood" data-mood="Sad">😔<span>Sad</span></button>
+    <button class="mood" data-mood="Stressed">😣<span>Stressed</span></button>
+    <button class="mood" data-mood="Angry">😠<span>Angry</span></button>
+    <button class="mood" data-mood="Lonely">🥺<span>Lonely</span></button>
+    <button class="mood" data-mood="Worried">😟<span>Worried</span></button>
 
-                <button
-                    class="mood"
-                    data-mood="Sad"
-                >
-                    😔
-                    <span>Sad</span>
-                </button>
+</div>
 
+<!-- Arrow -->
+<button id="showMoreMoods" class="show-more-moods">
+    ▼ More moods
+</button>
 
-                <button
-                    class="mood"
-                    data-mood="Stressed"
-                >
-                    😣
-                    <span>Stressed</span>
-                </button>
+<!-- Hidden moods -->
+<div id="moreMoods" class="moods more-moods">
 
+    <button class="mood" data-mood="Calm">😌<span>Calm</span></button>
+    <button class="mood" data-mood="Excited">🤩<span>Excited</span></button>
+    <button class="mood" data-mood="Confused">😕<span>Confused</span></button>
+    <button class="mood" data-mood="Tired">😴<span>Tired</span></button>
+    <button class="mood" data-mood="Nervous">😬<span>Nervous</span></button>
+    <button class="mood" data-mood="Overwhelmed">🫠<span>Overwhelmed</span></button>
+    <button class="mood" data-mood="Hopeful">🌱<span>Hopeful</span></button>
+    <button class="mood" data-mood="Grateful">🥰<span>Grateful</span></button>
+    <button class="mood" data-mood="Proud">😊<span>Proud</span></button>
+    <button class="mood" data-mood="Peaceful">🕊️<span>Peaceful</span></button>
 
-                <button
-                    class="mood"
-                    data-mood="Angry"
-                >
-                    😠
-                    <span>Angry</span>
-                </button>
-
-
-                <button
-                    class="mood"
-                    data-mood="Lonely"
-                >
-                    🥺
-                    <span>Lonely</span>
-                </button>
-
-
-                <button
-                    class="mood"
-                    data-mood="Worried"
-                >
-                    😟
-                    <span>Worried</span>
-                </button>
-
-            </div>
-
+</div>
             <p id="moodStatus">
                 No mood selected
             </p>
@@ -166,8 +157,8 @@
                 <div class="support-icon">
          <img src="my picture.png" alt="SafeSpace">
             </div>
-    <h1> Feelora🌸</h1>
-            </div>/  
+    <h1> Feelora</h1>
+            </div> 
 
             <!-- CHAT MESSAGES -->
 
@@ -185,7 +176,7 @@
                     <div class="bubble">
 
                         <strong>
-                            Feelora🌸
+                            Feelora
                         </strong>
 
                         <p>
@@ -212,13 +203,14 @@
                     id="messageInput"
                     maxlength="1000"
                     placeholder="Type what you're feeling..."
-                ></textarea>
+                > 
+            </textarea>
 
 
                 <div class="typing-footer">
 
                     <span id="characterCount">
-                        0 / 1000
+                        0 / 100000
                     </span>
 
                     <button
@@ -234,108 +226,10 @@
         </section>
 
 
-        <!-- SAFETY -->
-
-        <section class="safety-card">
-
-            <h2>
-                🛡️ Important
-            </h2>
-
-            <p>
-                SafeSpace provides general supportive information.
-                It is not a doctor, counselor, or emergency service.
-            </p>
-
-            <p>
-                If you are experiencing something that feels
-                too difficult or unsafe to handle alone,
-                please reach out to a trusted adult or qualified
-                professional.
-            </p>
-
-        </section>
-
-
-        <!-- PRIVACY -->
-
-        <section class="privacy-card">
-
-            <h2>
-                🔒 Privacy
-            </h2>
-
-            <p>
-                This application is designed to avoid requiring
-                your real name.
-            </p>
-
-            <p>
-                For your research project, do not collect
-                unnecessary identifying information from participants.
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>
-            SafeSpace V2
-        </p>
-
-        <p>
-            Anonymous Emotional Expression & Support Prototype
-        </p>
-
-    </footer>
-
-
     <script type="module" src="script.js"></script>
 
-    <!-- BEFORE / AFTER FEELING CHECK -->
+    <!-- AFTER FEELING CHECK -->
 <section class="card feeling-card">
-
-    <h2>💚 Feeling Check</h2>
-
-    <p class="small-text">
-        Rate how you feel right now before expressing your feelings.
-    </p>
-
-    <div class="feeling-scale">
-        <button class="feeling-rating" data-rating="1">
-            1<br>
-            <span>Very Negative</span>
-        </button>
-
-        <button class="feeling-rating" data-rating="2">
-            2<br>
-            <span>Negative</span>
-        </button>
-
-        <button class="feeling-rating" data-rating="3">
-            3<br>
-            <span>Neutral</span>
-        </button>
-
-        <button class="feeling-rating" data-rating="4">
-            4<br>
-            <span>Positive</span>
-        </button>
-
-        <button class="feeling-rating" data-rating="5">
-            5<br>
-            <span>Very Positive</span>
-        </button>
-    </div>
-
-    <p id="beforeStatus">
-        No before-rating selected
-    </p>
 
     <button id="afterRatingButton" class="after-rating-button" disabled>
         I'm Finished Expressing My Feelings
@@ -382,6 +276,9 @@
 
     </div>
 
+</section>
+<section class="daily-quote">
+    <p id="dailyQuote">Loading...</p>
 </section>
 
 </body>
